@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Lora', sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Assets/hero-image.png");
+    /*background-image: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);*/
+    /*background-image: url("hero-image.png");*/
+    background-color: #000;
+}
+
+.logo img {
+    position: absolute;
+    top: 2px; 
+    left: 2px; 
+    width: 100px; 
+    height: auto;
+}
+
+.main {
+    width: 350px;
+    height: 550px;
+    background: black;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    backdrop-filter: blur(2px);
+    background:fixed;
+    /*background: url("https://img.freepik.com/premium-vector/abstract-realistic-technology-particle-background_23-2148414765.jpg?w=740") no-repeat center/ cover;*/
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+
+#chk {
+    display: none;
+}
+
+.signup {
+    position: relative;
+    width: auto;
+    height:100%;
+    font-family: 'cinzel',sans-serif;
+    font-weight: bold;
+    overflow:hidden;
+}
+
+label {
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+input {
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #C19A6B;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius:  5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    font-family: 'cinzel',sans-serif;
+}
+
+button:hover {
+    /*background: #6d44b8;*/
+    background: transparent;
+    color: rgb(163, 143, 91);
+    border: 2px solid white;
+    transition: .8s ease-in-out;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.login{
+    height: 440px;
+    background: rgb(250, 235, 215);
+    border-radius: 60% / 10%;
+    transform: translateY(-110px);
+    transition: .8s ease-in-out;
+    font-family: 'cinzel',sans-serif;
+    z-index: 1;
+}
+
+.login label{
+    color: rgb(0, 0, 0); /*color: #573b8a;*/
+    transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
+
+input::-webkit-input-placeholder {
+    font-family: "Lora", serif;
+    color: black;
+}
+
+.msg {
+    font-family: "Lora", serif;
+    color: #C19A6B;
+    font-size: 12px;
+    width: 60%; 
+    margin: 5px auto; 
+    text-align: left; 
+    position: relative;
+    display: block;
+}
+
+.msg2 {
+    font-family: "Lora", serif;
+    color: #C19A6B;
+    font-size: 12px;
+    width: 60%; 
+    margin: 5px auto; 
+    text-align: left;
+    position: relative;
+    display: block;
+}
+
+.msg3 {
+    font-family: "Lora", serif;
+    color: white;
+    font-size: 12px;
+    width: 60%;
+    margin: 55px auto; 
+    text-align: center;
+    position: relative;
+    display: block;
+    
+}
+
+.js {
+    color: #917049;
+    font-size: 12px;
+    font-family: 'Lora',sans-serif;
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+    display: block;
+}
+
+.message {
+    width: 350px;
+    height: 150px;
+    background: black;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    backdrop-filter: blur(5px);
+    background:fixed;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+
+.message p {
+    color: #fff;
+    font-size: 1.4em;
+    justify-content: center;
+    display: flex;
+    margin: 30px;
+    font-weight: bold;
+}
+
+.message a {
+    text-decoration:none;
+}

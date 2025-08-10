@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Cinzel:wght@400..900&family=Jolly+Lodger&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel";
+}
+
+/* Global Styles For The Website */
+:root {
+        --primary-color: #1E2A38; /* Deep Navy Blue */
+        --secondary-color: #C19A6B; /* Antique Gold */
+        --white-color: #FAF8F6; /* Ivory White */
+        --dark-color: #121212; /* Charcoal Black */
+        --light-pink-color: #F8D7DA; /* Blush Pink */
+        --medium-grey-color: #A0A0A0; /* Ash Grey */
+
+        
+        --font-size-s: 0.9rem;
+        --font-size-n: 1rem;
+        --font-size-m: 1.12rem;
+        --font-size-l: 1.5rem;
+        --font-size-xl: 2rem;
+        --font-size-xxl: 2.3rem;
+
+        --font-weight-normal: 400;
+        --font-weight-medium: 500;
+        --font-weight-semibold: 600;
+        --font-weight-bold: 700;
+
+        --border-radius-s: 8px;
+        --border-radius-m: 30px;
+        --border-radius-circle: 50%;
+
+        --site-max-width: 1300px;
+
+      }
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+
+}
+
+.about-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+    color: var(--secondary-color);
+
+}
+
+.about-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--primary-color);
+}
+
+
+/* Navbar Styling */
+
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header .navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+
+
+
+.navbar .club-logo {
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.navbar .club-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar .club-logo .club-name {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-left: 15px;
+    
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    border-radius: var(--border-radius-m);
+    font-size: var(--font-size-s);
+    transition: 0.5s ease; 
+}
+
+.navbar .nav-menu .nav-link:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+
+}
+#menu-open-button, #menu-close-button {
+    display: none;
+}
+
+
+/* Hero Section Styling */
+.hero-section{
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+
+
+.section-content {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-details {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-color);
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
+    color: var(--secondary-color);
+    font-family: "Cinzel";
+}
+
+.hero-section .hero-details .subtitle {
+    margin-top: 8px;
+    font-size: var(--font-size-l);
+    font-family: "Lora";
+    font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details .description {
+    font-size: var(--font-size-m);
+    margin-top: 8px;
+    font-family: "Lora";
+    font-weight: var(--font-weight-normal);
+}
+
+.hero-section .hero-details .buttondiv{
+    margin-top: 20px;
+    display: flex;
+    gap : 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .hero-details .button {
+    min-width: 150px;
+    border: 2px solid transparent;
+    padding: 15px 15px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    transition: 0.8s ease;
+}
+
+
+.hero-section .hero-details .button:hover {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+
+/* About Section Styling */
+.about-section {
+    padding : 120px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+.about-section .about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+
+.about-section .about-image .about-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+    margin-left: 60px;
+}
+
+.about-section .about-details .about-title {
+    padding: 0;
+}
+
+.about-section .about-details  {
+    max-width: 50%;
+}
+
+.about-section .about-details .about-description {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    color: var(--white-color);
+    font-family: "Lora";
+    font-size: var(--font-size-m);
+    
+
+}
+
+.about-section .social-media {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.about-section .social-media .social-icon {
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    transition: 0.5s ease;
+}
+
+.about-section .social-media .social-icon:hover {
+    color: var(--secondary-color);
+}
+
+/* Testamonials Section Styling */
+.testamonials-section {
+    padding : 120px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.testamonials-section .slider-wrapper {
+    overflow: hidden;
+    margin:  0 60px 50px;
+
+}
+
+.testamonials-section .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.testamonials-section .testimonial .user-name {
+    margin-bottom: 8px;
+    font-size: var(--font-size-l);
+    color: var(--secondary-color);
+}
+
+.testamonials-section .testimonial .feedback {
+    font-size: var(--font-size-m);
+    color: var(--white-color);
+    font-family: "Lora";
+    margin-bottom: 40px;
+    
+
+}
+
+
+
+
+
+.testamonials-section .testimonial .user-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius-circle);
+}
+
+.testamonials-section .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+.testamonials-section .swiper-slide-button {
+    margin-top: -50px;
+    color: var(--secondary-color);
+    transition: 0.5s ease;
+}
+
+.testamonials-section .swiper-slide-button:hover {
+    color: var(--primary-color);
+}
+
+
+/* Contact Us Styling */
+.contact-section {
+    padding : 120px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.contact-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-section .contact-info-list .contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    color: var(--white-color);
+}
+
+.contact-section .contact-info-list .contact-info i {
+    font-size: var(--font-size-m);
+    color: var(--secondary-color);
+}
+
+.contact-section .contact-info-list .contact-info p {
+    font-size: var(--font-size-m);
+    font-family: "Lora";
+}
+
+.contact-section .contact-form {
+    margin-right: 60px;
+    max-width: 50%;
+}
+
+.contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    outline: none;
+    margin-bottom: 16px;
+    background: transparent;
+    border-radius: var(--border-radius-s);
+    border: 1px solid var(--white-color);
+}
+
+.contact-section .contact-form .form-input::placeholder {
+    color: var(--white-color);
+    font-family: "Lora";
+}
+
+.contact-section .contact-form .form-input:focus {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    backdrop-filter: blur(8px);
+}
+
+.contact-section .contact-form .form-input:active {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    outline: none;
+    margin-bottom: 16px;
+    background: transparent;
+    border-radius: var(--border-radius-s);
+    border: 1px solid var(--white-color);
+}
+
+.contact-section .contact-form textarea.form-input {
+    padding:  20px;
+    resize: vertical;
+    height: 100px;
+
+}
+
+.contact-section .contact-form  .submit-button {
+    background: var(--secondary-color);
+    padding: 15px;
+    text-align: center;
+    border-radius: var(--border-radius-m);
+    color: var(--white-color);
+    font-weight: var(--font-weight-bold);
+    transition: 0.8s ease;
+}
+
+.contact-section .contact-form  .submit-button:hover {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.footer-section {
+    padding : 120px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("Assets/hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer-section .section-content {
+    text-align: center;
+}
+
+.footer-section .footer-content {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-l);
+    color: var(--secondary-color);
+}
+
+.footer-section .footer-content .social-media {
+    display: flex;
+    gap: 50px;
+    
+}
+
+.footer-section .footer-content .social-media .social-icon {
+    font-size: var(--font-size-xxl);
+    color: var(--secondary-color);
+    transition: 0.5s ease;
+}
+
+.footer-section .footer-content .social-media .social-icon:hover {
+    color: var(--white-color);
+}
+
+
+    
+
+/* Media Queries */
+
+@media screen and (max-width: 640px) {
+
+    :root {
+        --font-size-n: 0.9rem;
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+    .navbar .club-logo .club-name {
+        font-size: var(--font-size-l);
+    }
+
+    #menu-open-button, #menu-close-button {
+        display: block;
+        font-size: var(--font-size-l);
+        color: var(--white-color);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        color: var(--white-color);
+        right: 30px;
+        top: 30px;
+        z-index: 10;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        top: 0;  
+        left: -300px;
+        width: 300px; 
+        height: 100vh; 
+        background: var(--dark-color);
+        padding-top: 100px; 
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        transition: 0.5s ease;
+        filter: none;
+        
+    }
+
+      body.show-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .navbar .nav-menu .nav-link {
+        width: 100%;
+        font-size: var(--font-size-m);
+        border-radius: 10;
+    }
+
+    
+    .hero-section .hero-details .title {
+        font-size: var(--font-size-xl);
+    }
+
+    .hero-section .hero-details .subtitle {
+        font-size: var(--font-size-m);
+    }
+
+    .hero-section .hero-details .description {
+        font-size: var(--font-size-s);
+    }
+
+    .hero-section .hero-details .buttondiv {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section .hero-details .button {
+        width: 200px;
+    }
+
+    .about-section .about-content {
+        gap: 70px;
+        flex-direction: column-reverse;
+        margin-left: 60px;
+    }
+
+    .about-section .about-image .about-img {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+        margin-right: 60px;
+    }
+
+    /* testamonial section */
+
+    .testamonials-section .slider-wrapper{
+        margin: 0 0 30px;
+    }
+
+    .testamonials-section .swiper-slide-button{
+        display: none;
+    }
+
+    .contact-section .section-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .contact-section .contact-form {
+        margin-left: 60px;
+
+    }
+
+    .contact-section .contact-form  .submit-button {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-section .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+    :root {
+        --font-size-n: 0.9rem;
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+    .navbar .club-logo .club-name {
+        font-size: var(--font-size-l);
+    }
+
+    #menu-open-button, #menu-close-button {
+        display: block;
+        font-size: var(--font-size-l);
+        color: var(--white-color);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        color: var(--white-color);
+        right: 30px;
+        top: 30px;
+        z-index: 10;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        top: 0;  
+        left: -300px;
+        width: 300px; 
+        height: 100vh; 
+        background: var(--dark-color);
+        padding-top: 100px; 
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        transition: 0.5s ease;
+        filter: none;
+        
+    }
+
+      body.show-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .navbar .nav-menu .nav-link {
+        width: 100%;
+        font-size: var(--font-size-m);
+        border-radius: 10;
+    }
+
+    
+    .hero-section .hero-details .title {
+        font-size: var(--font-size-xl);
+    }
+
+    .hero-section .hero-details .subtitle {
+        font-size: var(--font-size-m);
+    }
+
+    .hero-section .hero-details .description {
+        font-size: var(--font-size-s);
+    }
+
+    .hero-section .hero-details .buttondiv {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section .hero-details .button {
+        width: 200px;
+    }
+
+    .about-section .about-content {
+        gap: 70px;
+        flex-direction: column-reverse;
+        margin-left: 60px;
+    }
+
+    .about-section .about-image .about-img {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+        margin-right: 60px;
+    }
+
+    /* testamonial section */
+
+    .testamonials-section .slider-wrapper{
+        margin: 0 0 30px;
+    }
+
+    .testamonials-section .swiper-slide-button{
+        display: none;
+    }
+
+    .contact-section .section-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .contact-section .contact-form {
+        margin-left: 60px;
+
+    }
+
+    .contact-section .contact-form  .submit-button {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-section .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    :root {
+        --font-size-n: 0.9rem;
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+    .navbar .club-logo .club-name {
+        font-size: var(--font-size-l);
+    }
+
+    #menu-open-button, #menu-close-button {
+        display: block;
+        font-size: var(--font-size-l);
+        color: var(--white-color);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        color: var(--white-color);
+        right: 30px;
+        top: 30px;
+        z-index: 10;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        top: 0;  
+        left: -300px;
+        width: 300px; 
+        height: 100vh; 
+        background: var(--dark-color);
+        padding-top: 100px; 
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        transition: 0.5s ease;
+        filter: none;
+        
+    }
+
+      body.show-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .navbar .nav-menu .nav-link {
+        width: 100%;
+        font-size: var(--font-size-m);
+        border-radius: 10;
+    }
+
+    
+    .hero-section .hero-details .title {
+        font-size: var(--font-size-xl);
+    }
+
+    .hero-section .hero-details .subtitle {
+        font-size: var(--font-size-m);
+    }
+
+    .hero-section .hero-details .description {
+        font-size: var(--font-size-s);
+    }
+
+    .hero-section .hero-details .buttondiv {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section .hero-details .button {
+        width: 200px;
+    }
+
+    .about-section .about-content {
+        gap: 70px;
+        flex-direction: column-reverse;
+        margin-left: 60px;
+    }
+
+    .about-section .about-image .about-img {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+        margin-right: 60px;
+    }
+
+    /* testamonial section */
+
+    .testamonials-section .slider-wrapper{
+        margin: 0 0 30px;
+    }
+
+    .testamonials-section .swiper-slide-button{
+        display: none;
+    }
+
+    .contact-section .section-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .contact-section .contact-form {
+        margin-left: 60px;
+
+    }
+
+    .contact-section .contact-form  .submit-button {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-section .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+}
+
+
+
+
+
+    
+
+
+
+
+      
